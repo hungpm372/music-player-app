@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.MusicPlayerPhanMinhHưng" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#4a213f</item>
+        <item name="titleTextColor">#fff</item>
+    </style>
+
+    <style name="Theme.MusicPlayerPhanMinhHưng" parent="Base.Theme.MusicPlayerPhanMinhHưng" />
+</resources>

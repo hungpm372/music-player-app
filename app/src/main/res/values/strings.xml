@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="song_list_title">My playlist</string>
+    <string name="placeholder_song_name">Hãy Trao Cho Anh</string>
+    <string name="placeholder_artist_name">Sơn Tùng M-TP, Snoop Dogg</string>
+    <string name="placeholder_total_time">04:39</string>
+    <string name="placeholder_current_time">00:00</string>
+    <string name="search">Search</string>
+</resources>

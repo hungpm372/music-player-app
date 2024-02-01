@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:paddingHorizontal="28dp"
+    tools:context=".activities.MusicPlayerActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_disk_music_player"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hay_trao_cho_anh" />
+
+    <TextView
+        android:id="@+id/tv_song_name_music_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_disk_music_player"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_bold"
+        android:maxLines="1"
+        android:text="@string/placeholder_song_name"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_artist_music_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_song_name_music_player"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_medium"
+        android:maxLines="1"
+        android:text="@string/placeholder_artist_name"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/sb_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_container"
+        android:elevation="4dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:thumbOffset="3dp"
+        android:progressBackgroundTint="@color/progress_back_color"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_song"
+        android:layout_alignStart="@id/sb_song"
+        android:text="@string/placeholder_current_time"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_song"
+        android:layout_alignEnd="@id/sb_song"
+        android:text="@string/placeholder_total_time"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="40dp">
+
+        <ImageButton
+            android:id="@+id/btn_random"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btn_prev"
+            android:background="@android:color/transparent"
+            android:padding="13dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_random"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btn_play"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_prev"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="20dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_play"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btn_play"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_next"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_repeat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btn_next"
+            android:background="@android:color/transparent"
+            android:padding="13dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_repeat"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
